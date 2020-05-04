@@ -9,9 +9,37 @@ namespace Sweepstakes
     class Contestant
     {
         string firstName;
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
+        }   
         string lastName;
+        public string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+        }
         string email;
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+        }
         int registrationNum;
+        public int RegistrationNum
+        {
+            get
+            {
+                return registrationNum;
+            }
+        }
 
         public Contestant()
         {
