@@ -36,5 +36,10 @@ namespace Sweepstakes
             newSweepstakes.PrintContestantInfo(winner);
             UserInterface.ResetRegistration();
         }
+
+        public void Manager()
+        {
+            manager = UserInterface.ChooseManager();
+        }
     }
 }
