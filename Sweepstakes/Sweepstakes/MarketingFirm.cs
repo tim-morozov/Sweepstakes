@@ -10,6 +10,7 @@ namespace Sweepstakes
     {
         Sweepstakes newSweepstakes;
         int sweepstakesSize;
+        Manager manager;
 
         private void CreateSweepstakes()
         {
