@@ -1,0 +1,3 @@
+Dependancy injection
+I use dependency injection in the MarketingFirm class with the Manager object. It gets passed into the Marketing Firm constructor. When the Marketing
+Firm is created the firm has the choice of which Manager it wants to use, and how to choose it, without the program forcing it to choose, based on how I wrote it.
