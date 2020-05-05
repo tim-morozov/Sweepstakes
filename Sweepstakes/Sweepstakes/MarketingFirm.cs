@@ -26,7 +26,7 @@ namespace Sweepstakes
         public void RunSweepstakes()
         {
             CreateSweepstakes();
-            while (newSweepstakes.contestants.Count < sweepstakesSize)
+            while (newSweepstakes.contestants.Count < newSweepstakes.sweepstakesSize)
             {
                 Contestant newContestant = new Contestant();
                 newSweepstakes.RegisterContestant(newContestant);
