@@ -10,11 +10,14 @@ namespace Sweepstakes
     {
        public Dictionary<int, Contestant> contestants;
        public string name;
+       public Contestant winner;
+        public int sweepstakesSize;
        
         public Sweepstakes(string name)
         {
             this.name = name;
             contestants = new Dictionary<int, Contestant>();
+            sweepstakesSize = UserInterface.NumberOfContestants();
         }
 
         public void RegisterContestant(Contestant contestant)

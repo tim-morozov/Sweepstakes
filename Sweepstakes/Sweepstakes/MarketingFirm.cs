@@ -9,33 +9,31 @@ namespace Sweepstakes
     class MarketingFirm
     {
         Sweepstakes newSweepstakes;
-        int sweepstakesSize;
         Manager manager;
+
+        public MarketingFirm()
+        {
+            manager = UserInterface.ChooseManager();
+        }
 
         private void CreateSweepstakes()
         {
             string name = UserInterface.NameSweepstakes();
             newSweepstakes = new Sweepstakes(name);
-            ChooseSize();
-        }
-
-        private void ChooseSize()
-        {
-            sweepstakesSize = UserInterface.NumberOfContestants();
+           
         }
 
         public void RunSweepstakes()
         {
-            Contestant winner;
             CreateSweepstakes();
-            while (newSweepstakes.contestants.Count <= sweepstakesSize)
+            while (newSweepstakes.contestants.Count < sweepstakesSize)
             {
                 Contestant newContestant = new Contestant();
                 newSweepstakes.RegisterContestant(newContestant);
             }
-            winner = newSweepstakes.PickWinner();
+           newSweepstakes.winner = newSweepstakes.PickWinner();
             Console.WriteLine("The winner is: ");
-            newSweepstakes.PrintContestantInfo(winner);
+            newSweepstakes.PrintContestantInfo(newSweepstakes.winner);
             UserInterface.ResetRegistration();
         }
 
