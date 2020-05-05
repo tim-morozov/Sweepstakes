@@ -42,5 +42,11 @@ namespace Sweepstakes
             manager.InsertSweepstakes(newSweepstakes);
         }
 
+        public Sweepstakes RetrieveSweepstakes()
+        {
+            Sweepstakes retrieved;
+            retrieved = manager.GetSweepstakes();
+            return retrieved;
+        }
     }
 }
