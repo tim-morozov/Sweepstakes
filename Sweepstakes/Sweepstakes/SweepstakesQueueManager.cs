@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class SweepstakesQueueMangaer : ISweepstakesManager
+    class SweepstakesQueueManager : ISweepstakesManager
     {
         Queue<Sweepstakes> sweepstakesQueue;
-        public SweepstakesQueueMangaer()
+        public SweepstakesQueueManager()
         {
             sweepstakesQueue = new Queue<Sweepstakes>();
         }
@@ -20,7 +20,7 @@ namespace Sweepstakes
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            
+            sweepstakesQueue.Enqueue(sweepstakes);
         }
     }
 }
