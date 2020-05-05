@@ -19,7 +19,7 @@ namespace Sweepstakes
 
         public void RegisterContestant(Contestant contestant)
         {
-            contestants.Add(contestant.RegistrationNum, contestant);
+            contestants.Add(contestant.RegistrationNum, contestant); 
         }
 
         public Contestant PickWinner()
