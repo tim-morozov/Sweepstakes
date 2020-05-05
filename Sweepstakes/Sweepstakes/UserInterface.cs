@@ -54,5 +54,26 @@ namespace Sweepstakes
         {
             registration = 0;
         }
+
+        public static Manager ChooseManager()
+        {
+            Manager manager;
+            Console.WriteLine("Please choose a manager for your Sweepstakes");
+            Console.WriteLine("Press Q for a Queue manager");
+            Console.WriteLine("Press S for a Stack manager");
+            string input = Console.ReadLine().ToLower();
+
+           switch (input)
+            {
+                case "q":
+                    manager = new SweepstakesQueueManager();
+                    return manager;
+                case "s":
+                    manager = new SweepstakesStackManager();
+                    return manager;
+                default:
+                    return null;
+            }
+        }
     }
 }
