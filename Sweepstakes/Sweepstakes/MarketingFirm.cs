@@ -19,15 +19,20 @@ namespace Sweepstakes
 
         private void ChooseSize()
         {
-
+            sweepstakesSize = UserInterface.NumberOfContestants();
         }
 
         public void RunSweepstakes()
         {
             Contestant winner;
             CreateSweepstakes();
-            newSweepstakes.RegisterContestant(newContestant);
+            while (newSweepstakes.contestants.Count <= sweepstakesSize)
+            {
+                Contestant newContestant = new Contestant();
+                newSweepstakes.RegisterContestant(newContestant);
+            }
             winner = newSweepstakes.PickWinner();
+            newSweepstakes.PrintContestantInfo(winner);
 
         }
     }
