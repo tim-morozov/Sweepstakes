@@ -8,11 +8,13 @@ namespace Sweepstakes
 {
     class Sweepstakes
     {
-        Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
+        Dictionary<int, Contestant> contestants;
+        public string name;
        
-        public void Sweepstake(string name)
+        public Sweepstakes(string name)
         {
-
+            this.name = name;
+            contestants = new Dictionary<int, Contestant>();
         }
 
         public void RegisterContestant(Contestant contestant)
