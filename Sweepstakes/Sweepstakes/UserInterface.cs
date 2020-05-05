@@ -8,6 +8,7 @@ namespace Sweepstakes
 {
    static class UserInterface
     {
+        static int registration = 0;
         public static string GetFirstName()
         {
             string name;
@@ -28,6 +29,12 @@ namespace Sweepstakes
             Console.WriteLine("What is your email?");
             email = Console.ReadLine();
             return email;
+        }
+        public static int AssignNumber()
+        {
+            registration++;
+            Console.WriteLine("Your registration number is " + registration);
+            return registration;
         }
     }
 }

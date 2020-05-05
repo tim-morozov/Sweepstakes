@@ -17,6 +17,7 @@ namespace Sweepstakes
 
         public void RegisterContestant(Contestant contestant)
         {
+            contestant = new Contestant();
 
         }
 
