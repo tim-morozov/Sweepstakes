@@ -43,5 +43,12 @@ namespace Sweepstakes
             string name = Console.ReadLine();
             return name;
         }
+
+        public static int NumberOfContestants()
+        {
+            Console.WriteLine("How many contestants should there be?");
+            int size = Convert.ToInt32(Console.ReadLine());
+            return size;
+        }
     }
 }

@@ -9,11 +9,26 @@ namespace Sweepstakes
     class MarketingFirm
     {
         Sweepstakes newSweepstakes;
+        int sweepstakesSize;
 
-        public void CreateSweepstakes()
+        private void CreateSweepstakes()
         {
             string name = UserInterface.NameSweepstakes();
             newSweepstakes = new Sweepstakes(name);
+        }
+
+        private void ChooseSize()
+        {
+
+        }
+
+        public void RunSweepstakes()
+        {
+            Contestant winner;
+            CreateSweepstakes();
+            newSweepstakes.RegisterContestant(newContestant);
+            winner = newSweepstakes.PickWinner();
+
         }
     }
 }
