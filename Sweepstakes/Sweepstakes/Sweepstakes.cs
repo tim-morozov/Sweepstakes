@@ -8,6 +8,7 @@ namespace Sweepstakes
 {
     class Sweepstakes
     {
+        Contestant contestant = new Contestant();
         public void Sweepstake(string name)
         {
 
@@ -24,7 +25,10 @@ namespace Sweepstakes
         }
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            Console.WriteLine(contestant.FirstName);
+            Console.WriteLine(contestant.LastName);
+            Console.WriteLine(contestant.Email);
+            Console.WriteLine(contestant.RegistrationNum);
         }
     }
 }
