@@ -8,7 +8,7 @@ namespace Sweepstakes
 {
    static class UserInterface
     {
-       public static int registration = 0;
+       static int registration = 0;
         public static string GetFirstName()
         {
             string name;
@@ -49,6 +49,10 @@ namespace Sweepstakes
             Console.WriteLine("How many contestants should there be?");
             int size = Convert.ToInt32(Console.ReadLine());
             return size;
+        }
+        public static void ResetRegistration()
+        {
+            registration = 0;
         }
     }
 }
