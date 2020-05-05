@@ -11,9 +11,9 @@ namespace Sweepstakes
         Sweepstakes newSweepstakes;
         Manager manager;
 
-        public MarketingFirm()
+        public MarketingFirm(Manager manager)
         {
-            manager = UserInterface.ChooseManager();
+           this.manager = manager;
         }
 
         private void CreateSweepstakes()
@@ -37,10 +37,10 @@ namespace Sweepstakes
             UserInterface.ResetRegistration();
         }
 
-        public void Manager()
+        public void AddSweepstakes()
         {
-            manager = UserInterface.ChooseManager();
             manager.InsertSweepstakes(newSweepstakes);
         }
+
     }
 }

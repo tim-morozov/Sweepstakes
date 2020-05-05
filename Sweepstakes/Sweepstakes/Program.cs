@@ -10,11 +10,12 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            MarketingFirm firm = new MarketingFirm();
-            firm.RunSweepstakes();
+            //MarketingFirm firm = new MarketingFirm();
+            //firm.RunSweepstakes();
 
-            firm.Manager();
-            Console.ReadLine();
+            //firm.Manager();
+            //Console.ReadLine();
+            ISweepstakesManager manager = new SweepstakesQueueManager();
 
         }
     }

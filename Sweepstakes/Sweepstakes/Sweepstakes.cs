@@ -26,17 +26,18 @@ namespace Sweepstakes
         }
 
         public Contestant PickWinner()
-        {            
+        {
+            Contestant winner = null;
             Random random = new Random();
             int picked = random.Next(1, contestants.Count);
             foreach(KeyValuePair<int, Contestant> contestant in contestants)
             {
                 if(picked == contestant.Key)
                 {
-                    return contestant.Value;
+                    winner = contestant.Value;
                 }
             }
-            return null;
+            return winner;
         }
         public void PrintContestantInfo(Contestant contestant)
         {

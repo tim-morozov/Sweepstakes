@@ -55,14 +55,9 @@ namespace Sweepstakes
             registration = 0;
         }
 
-        public static Manager ChooseManager()
+        public static Manager ChooseManager(string input)
         {
-            Manager manager;
-            Console.WriteLine("Please choose a manager for your Sweepstakes");
-            Console.WriteLine("Press Q for a Queue manager");
-            Console.WriteLine("Press S for a Stack manager");
-            string input = Console.ReadLine().ToLower();
-
+           Manager manager;
            switch (input)
             {
                 case "q":
