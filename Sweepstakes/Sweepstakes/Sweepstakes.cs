@@ -8,8 +8,8 @@ namespace Sweepstakes
 {
     class Sweepstakes
     {
-        Dictionary<int, string> contestants = new Dictionary<int, string>();
-        Contestant contestant = new Contestant();
+        Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
+       
         public void Sweepstake(string name)
         {
 
@@ -18,12 +18,21 @@ namespace Sweepstakes
         public void RegisterContestant(Contestant contestant)
         {
             contestant = new Contestant();
-            contestants.Add(contestant.RegistrationNum, contestant.LastName);
+            contestants.Add(contestant.RegistrationNum, contestant);
 
         }
 
         public Contestant PickWinner()
         {
+            Random random = new Random();
+            int picked = random.Next(1, contestants.Count);
+            foreach(KeyValuePair<int, string> contestant in contestants)
+            {
+                if(picked == contestant.Key)
+                {
+                    return contestant;
+                }
+            }
 
         }
         public void PrintContestantInfo(Contestant contestant)
