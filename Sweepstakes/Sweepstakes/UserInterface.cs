@@ -36,5 +36,12 @@ namespace Sweepstakes
             Console.WriteLine("Your registration number is " + registration);
             return registration;
         }
+
+        public static string NameSweepstakes()
+        {
+            Console.WriteLine("What would you like to name your sweepstakes?");
+            string name = Console.ReadLine();
+            return name;
+        }
     }
 }

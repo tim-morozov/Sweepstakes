@@ -8,5 +8,11 @@ namespace Sweepstakes
 {
     class MarketingFirm
     {
+        Sweepstakes newSweepstakes;
+
+        public void CreateSweepstakes()
+        {
+            newSweepstakes = new Sweepstakes()
+        }
     }
 }

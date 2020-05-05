@@ -15,7 +15,9 @@ namespace Sweepstakes
         }
         public Sweepstakes GetSweepstakes()
         {
-            throw new NotImplementedException();
+            Sweepstakes sweepstakes;
+            sweepstakes = sweepstakesQueue.Dequeue();
+            return sweepstakes;
         }
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
