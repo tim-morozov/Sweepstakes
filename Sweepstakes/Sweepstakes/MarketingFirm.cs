@@ -16,6 +16,7 @@ namespace Sweepstakes
         {
             string name = UserInterface.NameSweepstakes();
             newSweepstakes = new Sweepstakes(name);
+            ChooseSize();
         }
 
         private void ChooseSize()
@@ -33,6 +34,7 @@ namespace Sweepstakes
                 newSweepstakes.RegisterContestant(newContestant);
             }
             winner = newSweepstakes.PickWinner();
+            Console.WriteLine("The winner is: ");
             newSweepstakes.PrintContestantInfo(winner);
             UserInterface.ResetRegistration();
         }
@@ -40,6 +42,7 @@ namespace Sweepstakes
         public void Manager()
         {
             manager = UserInterface.ChooseManager();
+            manager.InsertSweepstakes(newSweepstakes);
         }
     }
 }
