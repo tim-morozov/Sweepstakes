@@ -8,7 +8,7 @@ namespace Sweepstakes
 {
    static class UserInterface
     {
-        static int registration = 0;
+       public static int registration = 0;
         public static string GetFirstName()
         {
             string name;

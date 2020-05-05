@@ -34,7 +34,7 @@ namespace Sweepstakes
             }
             winner = newSweepstakes.PickWinner();
             newSweepstakes.PrintContestantInfo(winner);
-
+            UserInterface.registration = 0;
         }
     }
 }
